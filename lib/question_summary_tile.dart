@@ -41,10 +41,16 @@ class QuestionSummaryTile extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              isCorrect ? Icons.check_circle : Icons.cancel,
-              color: isCorrect ? Colors.green : Colors.red,
-              size: 24,
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+              ),
+              child: Icon(
+                isCorrect ? Icons.check_circle : Icons.cancel,
+                color: isCorrect ? Colors.green : Colors.red,
+                size: 24,
+              ),
             ),
             const SizedBox(width: 12),
             Expanded(
